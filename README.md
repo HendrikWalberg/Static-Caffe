@@ -1,2 +1,2 @@
 # Static-Caffe
-School Project Static, responsive and accessible website.
+School Project. Static, responsive and accessible website.
