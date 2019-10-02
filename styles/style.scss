@@ -25,6 +25,13 @@ $mobileGrid:
 "footer footer footer"
 "footer footer footer";
 
+@mixin video {
+    width: 100%;
+    height: auto;
+    clear: right;
+    margin: 0%;
+}
+
 @mixin header {
     header {
         display: grid;
@@ -58,6 +65,7 @@ $mobileGrid:
 
 * {
     font-family: fantasy;
+    margin: 0%;
 }
 
 @media screen and (min-width: $largeScreen) {
@@ -71,6 +79,9 @@ main {
     #menu {
         background: $menuColor;
         grid-area: menu;
+        video {
+            @include video();
+        }
     }
     #about {
         background: $aboutColor;
@@ -84,6 +95,9 @@ main {
     #footer {
         background: $footerColor;
         grid-area: footer;
+        embed {
+            border: 1px solid black; 
+        }
     }
 }
 
@@ -100,14 +114,24 @@ main {
         #menu {
             background: $menuColor;
             grid-area: menu;
+            video {
+                @include video();
+            }
         }
         #about {
             background: $aboutColor;
             grid-area: about;
+            article {
+                place-self: center;
+                width: 20em;
+            }
         }
         #footer {
             background: $footerColor;
             grid-area: footer;
+            embed {
+                border: 1px solid black;
+            }
         }
     }
     
@@ -125,14 +149,22 @@ main {
         #menu {
             background: $menuColor;
             grid-area: menu;
+            video {
+                @include video();
+            }
         }
         #about {
             background: $aboutColor;
             grid-area: about;
-        }
+           }
         #footer {
+            
             background: $footerColor;
             grid-area: footer;
+            display: grid;
+            embed {
+                border: 1px solid black;
+            }
         }
     }
     
