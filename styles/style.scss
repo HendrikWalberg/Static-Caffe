@@ -1,7 +1,7 @@
 $headerColor: lightblue;
-$menuColor: coral;
-$aboutColor: lightgreen;
-$footerColor: blue;
+$menuColor: linear-gradient(coral, white);
+$aboutColor: linear-gradient(lightgreen, white);
+$footerColor: linear-gradient(white, blue);
 $mobileScreen: 425px;
 $tabletScreen: 500px;
 $largeScreen: 768px;
@@ -16,12 +16,15 @@ $tabletGrid:
 "menu about"
 "menu about"
 "footer footer"
+"footer footer"
+"footer footer"
 "footer footer";
 $mobileGrid: 
 "menu menu menu"
 "menu menu menu"
 "about about about"
 "about about about"
+"footer footer footer"
 "footer footer footer"
 "footer footer footer";
 
@@ -32,28 +35,6 @@ $mobileGrid:
     margin: 0%;
 }
 
-@mixin header {
-    header {
-        display: grid;
-        background: $headerColor;
-        margin-bottom: 10px;
-        justify-content: center;
-    
-        h1 {
-            margin-left: 20px;
-        }
-        
-        p {
-            font-family: fantasy;
-            font-weight: 900;
-        }
-        li{
-            display: inline-block;
-            margin: 5px;
-            margin-right: 20px
-        }
-    }
-}
 
 @mixin gridSetup {
     display: grid;
@@ -70,7 +51,27 @@ $mobileGrid:
 
 @media screen and (min-width: $largeScreen) {
 
-@include header();
+    header {
+        display: grid;
+        background: $headerColor;
+        margin-bottom: 10px;
+        justify-content: center;
+    
+        h1 {
+            margin-left: 3em;
+        }
+        
+        p {
+            font-family: fantasy;
+            font-weight: 900;
+        }
+        li{
+            display: inline-block;
+            margin: 1em;
+            font-weight: 900;
+            width: 5em;
+        }
+    }
 
 main {
     @include gridSetup();
@@ -96,7 +97,8 @@ main {
         background: $footerColor;
         grid-area: footer;
         embed {
-            border: 1px solid black; 
+            border: 1px solid black;
+            height: 80%; 
         }
     }
 }
@@ -105,7 +107,27 @@ main {
 
 @media screen and (max-width: $largeScreen) {
 
-    @include header();
+    header {
+        display: grid;
+        background: $headerColor;
+        margin-bottom: 10px;
+        justify-content: center;
+    
+        h1 {
+            margin-left: 3em;
+        }
+        
+        p {
+            font-family: fantasy;
+            font-weight: 900;
+        }
+        li{
+            display: inline-block;
+            margin: 1em;
+            font-weight: 900;
+            width: 5em;
+        }
+    }
     
     main {
         @include gridSetup();
@@ -131,6 +153,10 @@ main {
             grid-area: footer;
             embed {
                 border: 1px solid black;
+                position: absolute;
+                height: 90%;
+                width: 90%;
+                margin-left: 2em;
             }
         }
     }
@@ -140,7 +166,28 @@ main {
 @media screen and (max-width: $mobileScreen) {
 
 
-    @include header();
+    header {
+        display: grid;
+        background: $headerColor;
+        margin-bottom: 10px;
+        justify-content: center;
+    
+        h1 {
+            margin-left: 2em;
+        }
+        
+        p {
+            font-family: fantasy;
+            font-weight: 900;
+        }
+        li{
+            text-align: center;
+            width: 10em;
+            display: block;
+            font-weight: 900;
+            border: 2px solid black;
+        }
+    }
     
     
     main {
@@ -161,9 +208,12 @@ main {
             
             background: $footerColor;
             grid-area: footer;
-            display: grid;
             embed {
                 border: 1px solid black;
+                height: 60%;
+                width: 80%;
+                margin-left: 2em;
+                
             }
         }
     }
