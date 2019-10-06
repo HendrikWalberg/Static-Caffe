@@ -31,8 +31,8 @@
   main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr, 1fr, 1fr;
-        grid-template-columns: 1fr, 1fr, 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);
     gap: 5px;
     margin: 0 auto;
@@ -47,7 +47,7 @@
     grid-area: menu;
   }
   main #menu video {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: 0%;
   }
@@ -108,12 +108,12 @@
   main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr, 1fr, 1fr;
-        grid-template-columns: 1fr, 1fr, 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);
     gap: 5px;
     margin: 0 auto;
-        grid-template-areas: "menu about" "menu about" "menu about" "aside aside" "aside aside" "aside aside" "aside aside";
+        grid-template-areas: "menu menu about" "menu menu about" "menu menu about" "aside aside aside" "aside aside aside" "aside aside aside" "aside aside aside";
   }
   main #menu {
     background: -webkit-gradient(linear, left top, left bottom, from(coral), to(white));
@@ -121,10 +121,11 @@
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: menu;
   }
   main #menu video {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: 0%;
   }
@@ -133,7 +134,7 @@
     background: linear-gradient(lightgreen, white);
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
-    -ms-grid-column: 2;
+    -ms-grid-column: 3;
     grid-area: about;
   }
   main #about article {
@@ -146,7 +147,7 @@
     -ms-grid-row: 4;
     -ms-grid-row-span: 4;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
+    -ms-grid-column-span: 3;
     grid-area: aside;
   }
   main #aside embed {
@@ -186,8 +187,8 @@
   main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr, 1fr, 1fr;
-        grid-template-columns: 1fr, 1fr, 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);
     gap: 5px;
     margin: 0 auto;
@@ -203,7 +204,7 @@
     grid-area: menu;
   }
   main #menu video {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: 0%;
   }
