@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,40 +9,40 @@
 </head>
 <body>
     
-    <header id="header">
-        <h1>Merde De Chat</h1>
+    <header role="banner" id="header">
+        <h1 tabindex="0">Merde De Chat</h1>
         <p>Om det funkar med fladdermöss så funkar det med katter...</p>
-        <nav id="nav">
+        <nav role="navigation" id="nav">
             <ul>
-                <li>Meny </li>
-                <li>Om Oss</li>
-                <li>Övrigt</li>
+                <li><a href="#menu">Meny</a> </li>
+                <li><a href="#about">Om Oss</a></li>
+                <li><a href="#aside">Övrigt</a></li>
             </ul>
         </nav>
     </header>
     <main id="main">
 
         <section id="menu">
-            <h3>Meny</h3>
-            <ul>
-                <li>Kladdkaka</li>
-                <li>Kaffe med "klimp"</li>
-                <li>Hårboll</li>
-                <li>Rivsår</li>
+            <h2 tabindex="0">Meny</h3>
+            <ul tabindex="0">
+                <li>Kladdkaka.</li>
+                <li>Kaffe med "klimp".</li>
+                <li>Hårboll.</li>
+                <li>Rivsår.</li>
             </ul>
 
-            <video controls src="jag ser dig.mov"></video>
+            <video controls src="jagserdig.mov"></video>
 
         </section>
 
         <section id="about">
             <article>
-            <h3>Om oss</h3>
-            <p>Caffe de chat, grundades av Hendrik Walberg
+            <h2 tabindex="0">Om oss</h3>
+            <p tabindex="0">Caffe de chat, grundades av Hendrik Walberg
                 2019 med ett mål: Servera de mäst 
-                "interssanta" dryckerna i världen. Efter en
-                längre tids studie av världens dyrast kaffe, 
-                Kopi Luwak insåg Hendrik att detsamma kunde
+                "intressanta" dryckerna i världen. Efter en
+                längre tids studie av världens dyrast kaffe 
+                Kopi Luwak, insåg Hendrik att detsamma kunde
                  göras med katter. Efter en längre tids 
                  experimentation var hans skapelser färdiga!</p>
             </article>
@@ -50,11 +50,11 @@
 
     
 
-    <footer id="footer">
-        
-        <h3>Övrig Information</h3>
-        <embed src="Caffe De Chat.pdf" type="application/pdf"/>
-    </footer>
+        <aside role="complementary" id="aside">
+            
+            <h2 tabindex="0">Övrig Information</h3>
+            <embed tabindex="0" src="CaffeDeChat.pdf" type="application/pdf"/>
+            </aside>
     </main>
 
 </body>

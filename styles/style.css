@@ -34,9 +34,9 @@
     -ms-grid-columns: 1fr, 1fr, 1fr;
         grid-template-columns: 1fr, 1fr, 1fr;
     grid-auto-rows: minmax(100px, auto);
-    gap: 10px;
+    gap: 5px;
     margin: 0 auto;
-        grid-template-areas: "menu about footer" "menu about footer" "menu about footer" "menu about footer" "menu about footer";
+        grid-template-areas: "menu about aside" "menu about aside" "menu about aside" "menu about aside" "menu about aside";
   }
   main #menu {
     background: -webkit-gradient(linear, left top, left bottom, from(coral), to(white));
@@ -49,7 +49,6 @@
   main #menu video {
     width: 90%;
     height: auto;
-    clear: right;
     margin: 0%;
   }
   main #about {
@@ -66,18 +65,18 @@
     place-self: center;
     width: 20em;
   }
-  main #footer {
+  main #aside {
     background: -webkit-gradient(linear, left top, left bottom, from(white), to(blue));
     background: linear-gradient(white, blue);
     -ms-grid-row: 1;
     -ms-grid-row-span: 5;
     -ms-grid-column: 3;
-    grid-area: footer;
+    grid-area: aside;
   }
-  main #footer embed {
+  main #aside embed {
     border: 1px solid black;
     height: 80%;
-    width: 100%;
+    width: 99%;
   }
 }
 
@@ -112,9 +111,9 @@
     -ms-grid-columns: 1fr, 1fr, 1fr;
         grid-template-columns: 1fr, 1fr, 1fr;
     grid-auto-rows: minmax(100px, auto);
-    gap: 10px;
+    gap: 5px;
     margin: 0 auto;
-        grid-template-areas: "menu about" "menu about" "menu about" "footer footer" "footer footer" "footer footer" "footer footer";
+        grid-template-areas: "menu about" "menu about" "menu about" "aside aside" "aside aside" "aside aside" "aside aside";
   }
   main #menu {
     background: -webkit-gradient(linear, left top, left bottom, from(coral), to(white));
@@ -127,7 +126,6 @@
   main #menu video {
     width: 90%;
     height: auto;
-    clear: right;
     margin: 0%;
   }
   main #about {
@@ -142,21 +140,21 @@
     place-self: center;
     width: 20em;
   }
-  main #footer {
+  main #aside {
     background: -webkit-gradient(linear, left top, left bottom, from(white), to(blue));
     background: linear-gradient(white, blue);
     -ms-grid-row: 4;
     -ms-grid-row-span: 4;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-    grid-area: footer;
+    grid-area: aside;
   }
-  main #footer embed {
+  main #aside embed {
     border: 1px solid black;
     position: absolute;
-    height: 90%;
-    width: 90%;
-    margin-left: 2em;
+    height: 80%;
+    width: 80%;
+    margin-left: 1em;
   }
 }
 
@@ -191,9 +189,9 @@
     -ms-grid-columns: 1fr, 1fr, 1fr;
         grid-template-columns: 1fr, 1fr, 1fr;
     grid-auto-rows: minmax(100px, auto);
-    gap: 10px;
+    gap: 5px;
     margin: 0 auto;
-        grid-template-areas: "menu menu menu" "menu menu menu" "about about about" "about about about" "footer footer footer" "footer footer footer" "footer footer footer";
+        grid-template-areas: "menu menu menu" "menu menu menu" "about about about" "about about about" "aside aside aside" "aside aside aside" "aside aside aside";
   }
   main #menu {
     background: -webkit-gradient(linear, left top, left bottom, from(coral), to(white));
@@ -207,7 +205,6 @@
   main #menu video {
     width: 90%;
     height: auto;
-    clear: right;
     margin: 0%;
   }
   main #about {
@@ -219,16 +216,16 @@
     -ms-grid-column-span: 3;
     grid-area: about;
   }
-  main #footer {
+  main #aside {
     background: -webkit-gradient(linear, left top, left bottom, from(white), to(blue));
     background: linear-gradient(white, blue);
     -ms-grid-row: 5;
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
-    grid-area: footer;
+    grid-area: aside;
   }
-  main #footer embed {
+  main #aside embed {
     border: 1px solid black;
     height: 60%;
     width: 80%;
